@@ -1,0 +1,556 @@
+@charset "utf-8";
+@import url(font.css);
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+.gnb {
+	font-family: 'Stylish'
+}
+
+h2 {
+	font-size: 50px;
+}
+
+h3 {
+	font-size: 40px;
+}
+
+p {
+	font-size: 25px;
+}
+
+[class $='con'] {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+
+header {
+	height: 80px;
+	border-bottom: 1px solid #333;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	background: #000;
+}
+
+header .h-con {
+	line-height: 80px;
+}
+
+header h1 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+header h1 img {
+	height: 100px;
+}
+
+header .gnb {
+	float: right;
+	font-size: 20px;
+}
+
+header .gnb a {
+	float: left;
+	text-align: center;
+	position: relative;
+	margin-right: 30px;
+	transition: all 0.3s;
+}
+
+header .gnb a:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	width: 0%;
+	height: 5px;
+	background: #c4161c;
+	transition: all 0.3s;
+}
+
+header .gnb a:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+header .menu-btn {
+	display: none;
+	background: transparent;
+	color: #fff;
+}
+
+.visual {
+	height: 100%;
+}
+
+.visual .v-con {}
+
+.visual video {
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 50%;
+}
+
+.main-text {
+	height: 300px
+}
+
+.main-text p {
+	font-size: 20px;
+	line-height: 2;
+	text-align: center;
+	padding-top: 90px;
+}
+
+/*main*/
+main h2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+main h2 + p {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+main section {
+	position: relative;
+}
+
+/*섹션1*/
+main #st1 {
+	height: 800px;
+}
+
+main #st1 p {
+	width: 60%;
+	text-align: justify;
+	line-height: 50px;
+	margin-left: 50px;
+	text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff;
+}
+
+main #st1 .con-box {
+	z-index: 2;
+}
+
+main #st1 .lee {
+	position: absolute;
+	right: 0;
+	top: 0px;
+	z-index: 1;
+}
+
+main #st1 .lee img {
+	width: 600px;
+	transition: all 0.3s;
+}
+
+/*섹션2*/
+main #st2 {
+	height: 40vw;
+	background: #000;
+	color: #fff;
+}
+
+main #st2 .con-box {
+	z-index: 2;
+}
+
+main #st2 ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+main #st2 li {
+	position: relative;
+	width: 25vw;
+	cursor: pointer;
+}
+
+main #st2 li img {
+	width: 100%;
+	transition: all 0.3s;
+}
+
+main #st2 li img:hover {
+	outline: solid 5px #fff;
+}
+
+/*섹션3*/
+main #st3 {
+	height: 500px;
+}
+
+main #st3 ul {
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+
+main #st3 ul:not(:last-child) {
+	margin-right: 100px;
+}
+
+main #st3 i {
+	font-size: 80px;
+	transition: all 0.3s;
+}
+main #st3 ul:hover i {
+	transform: translateY(-10px);
+}
+main #st3 .con-box {
+	width: 60%;
+	right: 0;
+	text-align: right;
+	z-index: 2;
+}
+
+main #st3 .mid-gnb {
+	width: 420px;
+	margin: auto;
+}
+
+main #st3 .hwang {
+	position: absolute;
+	left: 0;
+	top: -250px;
+	z-index: 1;
+}
+
+main #st3 .hwang img {
+	width: 600px;
+	transition: all 0.3s;
+}
+
+/*섹션4*/
+main #st4 {
+	height: 500px;
+	background: url(../img/mid_text.jpg) no-repeat fixed 0 / cover;
+}
+
+main #st4 blockquote {
+	text-align: center;
+	font-size: 3vw;
+	color: #fff;
+	text-shadow: 1px 1px 2px #000;
+}
+
+/*섹션5*/
+main #st5 {
+	height: 40vw;
+}
+
+main #st5 ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+main #st5 li {
+	width: 25vw;
+	cursor: pointer;
+}
+
+main #st5 li img {
+	width: 100%;
+	transition: all 0.3s;
+}
+
+main #st5 li:hover img {
+	outline: solid 5px #c4161c;
+}
+
+main #st5 li p {
+	text-align: center;
+	margin-top: 5px;
+}
+
+/*con-box*/
+main .con-box {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+footer {
+	background: #000;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+footer .f-bottom {
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-style: normal;
+}
+
+footer .f-bottom a {
+	color: #fff;
+}
+
+footer .f-bottom a:hover {
+	text-decoration: underline #ccc;
+}
+
+/*721~940*/
+@media screen and (min-width: 721px) and (max-width: 940px) {
+
+	header .gnb {
+		position: absolute;
+		float: none;
+		width: 100%;
+		margin: 0;
+		background: rgba(0, 0, 0, 0.8);
+		top: 80px;
+		display: none;
+	}
+
+	/*제이쿼리로 처리할 부분 .on*/
+	header .gnb.on {
+		display: block;
+	}
+
+	header .gnb a {
+		display: block;
+		float: none;
+		width: auto;
+		color: #eee;
+		font-size: 25px;
+		line-height: 65px;
+	}
+
+	header .gnb a:hover {
+		color: #c4161c;
+	}
+
+	header .gnb a:after {
+		display: none;
+	}
+
+	header .menu-btn {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+
+	header .menu-btn i {
+		font-size: 30px;
+		padding: 10px;
+	}
+
+	header .fa-bars {
+		display: block;
+	}
+
+	header .fa-times {
+		display: none;
+	}
+
+	header .menu-btn.on .fa-bars {
+		display: none;
+	}
+
+	header .menu-btn.on .fa-times {
+		display: block;
+	}
+
+	main #st2 {
+		height: 140vw;
+	}
+
+	main #st2 ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	main #st2 li {
+		width: 60vw;
+	}
+
+	main #st2 li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	main #st4 {
+		height: 30vw;
+		background: url(../img/mid_text.jpg) no-repeat 0 -20px / cover;
+	}
+
+	main #st4 blockquote {
+		font-size: 3vw;
+	}
+
+	main #st5 {
+		height: 145vw;
+	}
+
+	main #st5 ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	main #st5 li {
+		width: 60vw;
+	}
+
+	main #st5 li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+}
+
+/*~720*/
+@media screen and (max-width: 720px) {
+
+	header .gnb {
+		position: absolute;
+		float: none;
+		width: 100%;
+		margin: 0;
+		background: rgba(0, 0, 0, 0.8);
+		top: 80px;
+		display: none;
+	}
+
+	/*제이쿼리로 처리할 부분 .on*/
+	header .gnb.on {
+		display: block;
+	}
+
+	header .gnb a {
+		display: block;
+		float: none;
+		width: auto;
+		color: #eee;
+		font-size: 25px;
+		line-height: 46px;
+	}
+
+	header .gnb a:hover {
+		color: #c4161c;
+	}
+
+	header .gnb a:after {
+		display: none;
+	}
+
+	header .menu-btn {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+
+	header .menu-btn i {
+		font-size: 30px;
+		padding: 10px;
+	}
+
+	header .fa-bars {
+		display: block;
+	}
+
+	header .fa-times {
+		display: none;
+	}
+
+	header .menu-btn.on .fa-bars {
+		display: none;
+	}
+
+	header .menu-btn.on .fa-times {
+		display: block;
+	}
+
+	main #st1 .lee img {
+		width: 500px;
+	}
+
+	main #st1 p {
+		width: 100%;
+		margin-left: 0px;
+		padding: 0px 50px;
+		box-sizing: border-box;
+		line-height: 45px;
+	}
+
+	main #st2 {
+		height: 150vw;
+	}
+
+	main #st2 ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	main #st2 li {
+		width: 60vw;
+	}
+
+	main #st2 li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	main #st3 .hwang {
+		top: -170px;
+	}
+
+	main #st3 .hwang img {
+		width: 500px;
+	}
+
+	main #st3 i {
+		font-size: 50px;
+	}
+
+	main #st3 h3 {
+		font-size: 30px;
+	}
+
+	main #st3 ul:not(:last-child) {
+		margin-right: 60px;
+	}
+
+	main #st4 {
+		height: 30vw;
+		background: url(../img/mid_text.jpg) no-repeat 0 -20px / cover;
+	}
+
+	main #st4 blockquote {
+		font-size: 3vw;
+	}
+
+	main #st5 {
+		height: 170vw;
+	}
+
+	main #st5 ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	main #st5 li {
+		width: 60vw;
+	}
+
+	main #st5 li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+}
