@@ -4,6 +4,7 @@
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 	color: #000;
+	overflow-x: hidden;
 }
 
 h1,
@@ -37,7 +38,7 @@ header {
 	height: 80px;
 	border-bottom: 1px solid #333;
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	color: #fff;
 	background: #000;
 }
@@ -123,11 +124,19 @@ main h2 {
 
 main h2 + p {
 	text-align: center;
-	margin-bottom: 50px;
 }
 
 main section {
 	position: relative;
+}
+
+/*con-box*/
+main .con-box {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding: 70px 0;
 }
 
 /*섹션1*/
@@ -152,6 +161,7 @@ main #st1 .lee {
 	right: 0;
 	top: 0px;
 	z-index: 1;
+	transition: all 0.3s;
 }
 
 main #st1 .lee img {
@@ -169,7 +179,9 @@ main #st2 {
 main #st2 .con-box {
 	z-index: 2;
 }
-
+main #st2 p {
+	margin-bottom: 50px;
+}
 main #st2 ul {
 	display: flex;
 	justify-content: space-around;
@@ -194,34 +206,29 @@ main #st2 li img:hover {
 main #st3 {
 	height: 500px;
 }
-
+main #st3 .con-box {
+	width: 75%;
+	right: 0;
+	z-index: 2;
+}
+main #st3 .mid-gnb {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
 main #st3 ul {
-	float: left;
-	text-align: center;
 	cursor: pointer;
+	margin: 0 10%;
 }
-
-main #st3 ul:not(:last-child) {
-	margin-right: 100px;
+main #st3 ul li {
+	text-align: center;
 }
-
 main #st3 i {
 	font-size: 80px;
 	transition: all 0.3s;
 }
 main #st3 ul:hover i {
 	transform: translateY(-10px);
-}
-main #st3 .con-box {
-	width: 60%;
-	right: 0;
-	text-align: right;
-	z-index: 2;
-}
-
-main #st3 .mid-gnb {
-	width: 420px;
-	margin: auto;
 }
 
 main #st3 .hwang {
@@ -278,14 +285,6 @@ main #st5 li p {
 	margin-top: 5px;
 }
 
-/*con-box*/
-main .con-box {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 100%;
-}
-
 footer {
 	background: #000;
 	text-align: center;
@@ -312,11 +311,13 @@ footer .f-bottom a:hover {
 
 	header .gnb {
 		position: absolute;
+		top: 0px;
 		float: none;
 		width: 100%;
+		height: 150vh;
 		margin: 0;
-		background: rgba(0, 0, 0, 0.8);
-		top: 80px;
+		padding-top: 80px;
+		background: rgba(0, 0, 0, 0.9);
 		display: none;
 	}
 
@@ -330,8 +331,8 @@ footer .f-bottom a:hover {
 		float: none;
 		width: auto;
 		color: #eee;
-		font-size: 25px;
-		line-height: 65px;
+		font-size: 6vw;
+		line-height: 10vh;
 	}
 
 	header .gnb a:hover {
@@ -420,11 +421,13 @@ footer .f-bottom a:hover {
 
 	header .gnb {
 		position: absolute;
+		top: 0px;
 		float: none;
 		width: 100%;
+		height: 150vh;
 		margin: 0;
-		background: rgba(0, 0, 0, 0.8);
-		top: 80px;
+		padding-top: 80px;
+		background: rgba(0, 0, 0, 0.9);
 		display: none;
 	}
 
@@ -438,8 +441,8 @@ footer .f-bottom a:hover {
 		float: none;
 		width: auto;
 		color: #eee;
-		font-size: 25px;
-		line-height: 46px;
+		font-size: 10vw;
+		line-height: 10vh;
 	}
 
 	header .gnb a:hover {
@@ -477,9 +480,11 @@ footer .f-bottom a:hover {
 	header .menu-btn.on .fa-times {
 		display: block;
 	}
-
+	main #st1 .lee {
+		top: 20%;
+	}
 	main #st1 .lee img {
-		width: 500px;
+		width: 415px;
 	}
 
 	main #st1 p {
@@ -506,13 +511,18 @@ footer .f-bottom a:hover {
 	main #st2 li:not(:last-child) {
 		margin-bottom: 20px;
 	}
+	
+	main #st3 .mid-gnb {
+		flex-direction: column;
 
+	}
+	
 	main #st3 .hwang {
-		top: -170px;
+		top: -70px;
 	}
 
 	main #st3 .hwang img {
-		width: 500px;
+		width: 100%;
 	}
 
 	main #st3 i {
@@ -523,8 +533,8 @@ footer .f-bottom a:hover {
 		font-size: 30px;
 	}
 
-	main #st3 ul:not(:last-child) {
-		margin-right: 60px;
+	main #st3 ul {
+		margin: 20px;
 	}
 
 	main #st4 {
@@ -554,3 +564,48 @@ footer .f-bottom a:hover {
 	}
 
 }
+
+
+}
+
+
+/*여기서 부터 jun_modal_popup 스타일*/
+/* jun_modal_popup Code by tadjun@naver.com */
+.modal-popup {
+	display: none;
+}
+.modal-popup.on {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 999;
+}
+.modal-popup.on .img-popup {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+	justify-content: center;
+}
+.modal-popup .close-popup {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.modal-popup .close-border-popup {
+    width: 0;
+    height: 0;
+    border-top: 10px solid #555;
+    border-right: 10px solid #444;
+    border-bottom: 10px solid #222;
+    border-left: 10px solid #333;
+}
+/*여기까지 jun_modal-popup 스타일*/
